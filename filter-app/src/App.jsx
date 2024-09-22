@@ -39,7 +39,7 @@ function App() {
     }
 
     try {
-      const response = await axios.post(`${baseURl}/bfhl`, JSON.parse(jsonInput)); // Adjust the URL if necessary
+      const response = await axios.post(`api/bfhl`, JSON.parse(jsonInput)); // Adjust the URL if necessary
       setResponseData(response.data);
     } catch (error) {
       console.error('Error submitting the form', error);
