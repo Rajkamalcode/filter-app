@@ -38,7 +38,7 @@ function App() {
     }
 
     try {
-      const response = await axios.post(`https://filterapp-fca6jvzpq-rajkamalcodes-projects.vercel.app/api/bfhl`, JSON.parse(jsonInput)); // Adjust the URL if necessary
+      const response = await axios.post(`https://filterapp-2uyu5kdgk-rajkamalcodes-projects.vercel.app/api/bfhl`, JSON.parse(jsonInput)); // Adjust the URL if necessary
       setResponseData(response.data);
     } catch (error) {
       console.error('Error submitting the form', error);
