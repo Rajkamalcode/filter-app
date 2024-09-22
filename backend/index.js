@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use('/bfhl', bfhlRoutes);
+app.use('api/bfhl', bfhlRoutes);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
