@@ -37,7 +37,7 @@ function App() {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/bfhl', JSON.parse(jsonInput)); // Adjust the URL if necessary
+      const response = await axios.post('/bfhl', JSON.parse(jsonInput)); // Adjust the URL if necessary
       setResponseData(response.data);
     } catch (error) {
       console.error('Error submitting the form', error);
