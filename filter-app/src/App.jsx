@@ -8,7 +8,6 @@ function App() {
   const [responseData, setResponseData] = useState(null);
   const [selectedOptions, setSelectedOptions] = useState([]);
   
-  const baseURl = process.env.REACT_APP_API_URL;
 
   // Multi-select dropdown options
   const options = [
@@ -39,7 +38,7 @@ function App() {
     }
 
     try {
-      const response = await axios.post(`api/bfhl`, JSON.parse(jsonInput)); // Adjust the URL if necessary
+      const response = await axios.post(`https://filterapp-mv9h7hzp8-rajkamalcodes-projects.vercel.app/api/bfhl`, JSON.parse(jsonInput)); // Adjust the URL if necessary
       setResponseData(response.data);
     } catch (error) {
       console.error('Error submitting the form', error);
