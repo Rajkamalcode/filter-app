@@ -1,0 +1,8 @@
+[build]
+  command = "npm install --prefix filter-app && npm run build --prefix filter-app"
+  publish = "filter-app/dist"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/backend/api/:splat"
+  status = 200
