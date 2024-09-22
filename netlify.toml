@@ -1,7 +1,11 @@
 [build]
-  command = "npm install --prefix filter-app && npm run build --prefix filter-app"
+  command = "npm install --prefix filter-app && npm run build --prefix filter-app && npm install --prefix backend"
   publish = "filter-app/dist"
 
+[functions]
+  external_node_modules = ["express"]
+  node_bundler = "esbuild"
+  
 [[redirects]]
   from = "/api/*"
   to = "/backend/api/:splat"
