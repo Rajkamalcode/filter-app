@@ -8,6 +8,8 @@ function App() {
   const [responseData, setResponseData] = useState(null);
   const [selectedOptions, setSelectedOptions] = useState([]);
   
+  const baseURl = process.env.REACT_APP_API_URL;
+
   // Multi-select dropdown options
   const options = [
     { value: 'alphabets', label: 'Alphabets' },
@@ -37,7 +39,7 @@ function App() {
     }
 
     try {
-      const response = await axios.post('/bfhl', JSON.parse(jsonInput)); // Adjust the URL if necessary
+      const response = await axios.post(`${baseURl}/bfhl`, JSON.parse(jsonInput)); // Adjust the URL if necessary
       setResponseData(response.data);
     } catch (error) {
       console.error('Error submitting the form', error);
